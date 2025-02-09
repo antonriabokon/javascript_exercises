@@ -13,4 +13,6 @@
     - [x] loops
     - [x] 8_ball
 - **week_04:**
-    - [ ]  basic_dom
+    - [x]  basic_dom
+    - [ ]  atm_simulator
+    - [ ]  pancake_maker
