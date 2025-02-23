@@ -14,5 +14,8 @@
     - [x] 8_ball
 - **week_04:**
     - [x]  basic_dom
-    - [ ]  atm_simulator
-    - [ ]  pancake_maker
+    - [x]  atm_simulator
+    - [x]  pancake_maker
+    - **week_04:**
+    - [x]  arrays
+    - [ ]  pancake_maker_2
