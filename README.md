@@ -16,6 +16,6 @@
     - [x]  basic_dom
     - [x]  atm_simulator
     - [x]  pancake_maker
-    - **week_04:**
+- **week_05:**
     - [x]  arrays
     - [ ]  pancake_maker_2
