@@ -18,4 +18,7 @@
     - [x]  pancake_maker
 - **week_05:**
     - [x]  arrays
-    - [ ]  pancake_maker_2
+    - [x]  pancake_maker_2
+- **week_06:**
+    - [x]  little_zoo
+    - [ ]  objects
