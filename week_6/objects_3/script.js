@@ -65,6 +65,26 @@ Display `value` in an HTML element and update it dynamically when buttons are cl
 
 // Your code here
 
+const counter = {
+    value: 0
+};
+
+const buttonTwo = document.querySelector('#btnTwo');
+const buttonThree = document.querySelector('#btnThree');
+const valueDisplay = document.querySelector('#valueDisplay');
+
+buttonTwo.addEventListener('click', function () {
+    counter.value++;
+    valueDisplay.textContent = counter.value;
+    console.log(counter.value); 
+});
+buttonThree.addEventListener('click', function() {
+    counter.value--;
+    valueDisplay.textContent = counter.value;
+    console.log(counter.value);
+});
+
+
 /* Task 5
 Create an object `product` with `name`, `price`, and `quantity`.
 Add an input field in HTML where the user can enter a quantity to purchase.
@@ -72,6 +92,21 @@ Update the `quantity` property and display the total price dynamically.
 */
 
 // Your code here
+const product = {
+    name: "Dutch babies(It's a dish :) )",
+    price: 10,
+    quantity: 0
+};
+
+const input = document.querySelector('#input');
+
+input.addEventListener('input', (event) => {
+    document.querySelector('#liveOut').textContent =
+    event.target.value;
+    product.quantity = event.target.value;
+    console.log(product.quantity);
+});
+
 
 /* Task 6
 Define a `Task` constructor that takes `title`, `description`, and `completed`.
@@ -79,6 +114,24 @@ Add a button in HTML that, when clicked, adds a new `Task` object to a `tasks` a
 */
 
 // Your code here
+class Task {
+    constructor(title, description, completed) {
+        this.title = title;
+        this.description = description;
+        this.completed = completed;
+    }
+}
+const tasks = [];
+
+const buttonFour = document.querySelector('#btnFour');
+const outputText = document.querySelector('#txtOut');
+buttonFour.addEventListener('click', () => {
+    const taskOne = new Task('English', 'Do your classes', true);
+    tasks.push(taskOne);
+    console.log(tasks);
+    outputText.textContent = JSON.stringify(tasks, null, 1); 
+});
+
 
 /* Task 7
 Create an object `weatherApp` with a method `fetchWeather(city)`.
@@ -87,6 +140,14 @@ Use `fetch` to get weather data from an API and display it in an HTML element.
 */
 
 // Your code here
+const weatherApp = {
+    city:'',
+    temperature: '',
+    async fetchWeather(city) {
+        
+
+    }
+}
 
 /* Task 8
 Create a constructor function `Car` that takes `brand`, `model`, and `year`.
