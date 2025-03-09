@@ -21,4 +21,8 @@
     - [x]  pancake_maker_2
 - **week_06:**
     - [x]  little_zoo
-    - [ ]  objects
+    - [x]  objects
+- **week_07:**
+    - [x]  JSON
+    - [x]  localstorage
+    - [ ]  pancake_step_3
