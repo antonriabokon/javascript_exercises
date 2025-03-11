@@ -7,16 +7,17 @@ Task: Create a function `task1` that uses `"use strict"`.
 Example:
 task1(); // Logs: "Strict mode error: variable is not defined"
 */
-"use strict"
+"use strict";
 function task1() {
     // Code here
     try {
        const test = undeclared - 1;
     } catch (error) {
-        console.error(`"Strict mode error: ${error.message}"`)
+        console.error(`Strict mode error: ${error.message}`)
     }
-};
+}
 task1();
+
 
 /* Task 2: Declare Variables Correctly
 /*
@@ -27,7 +28,7 @@ Expected:
 - The error should be caught and logged.
 - `MAX_USERS` should not change.
 */
-"use strict"
+
 function task2() {
     // Code here
     const MAX_USERS = 100;
@@ -35,10 +36,11 @@ function task2() {
     try {
         MAX_USERS = currentUsers;
     } catch (error) {
-        console.error(`"Alarm, alarm:" ${error.message}`);
+        console.error(`Alarm, alarm: ${error.message}`);
     }
-};
+}
 task2();
+
 
 /* Task 3: Create and Log an Object
 /*
@@ -60,8 +62,9 @@ function task3() {
         isAdmin: true
     }
     console.log(userProfile);
-};
+}
 task3();
+
 
 /* Task 4: Write a Simple Function
 /*
@@ -75,8 +78,9 @@ calculateArea(5, 10) → 50
 function calculateArea(width, height) {
     // Code here
     return width * height;
-};
+}
 console.log(calculateArea(10, 5));
+
 
 /* Task 5: Avoid Magic Numbers
 /*
@@ -91,8 +95,9 @@ const DISCOUNT = 0.1;
 function applyDiscount(price) {
     // Code here
     return price - (price * DISCOUNT);
-};
+}
 console.log(applyDiscount(100));
+
 
 /* Task 6: Write Useful Comments
 /*
@@ -108,13 +113,14 @@ function greetUser(name) {
     // Check the name to be a valid value
     if (name.length > 0 && isNaN) {
         // If it is, log the message
-        return console.log(`'Hello, ${name}!'`);
+        return console.log(`Hello, ${name}!`);
     } else {
         // If it's not, log the message
         console.log('Please enter the a prooper name!');
     }
-};
+}
 greetUser('Bob');
+
 
 /* Task 7: Refactor Unclear Code
 /*
@@ -136,8 +142,9 @@ function checkNumber(num) {
     } else {
         return console.log('Number is zero');
     }
-};
+}
 checkNumber(0);
+
 
 /* Task 8: Fix Formatting
 /*
@@ -153,4 +160,5 @@ After:
 function example() {
     let x = 10;
     console.log(x);
-};
+}
+example();

@@ -26,3 +26,6 @@
     - [x]  JSON
     - [x]  localstorage
     - [ ]  pancake_step_3
+- **week_08:**
+    - [x]  error_handling
+    - [x]  ljs_writing_practices
