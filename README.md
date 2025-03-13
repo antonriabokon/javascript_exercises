@@ -28,4 +28,5 @@
     - [ ]  pancake_step_3
 - **week_08:**
     - [x]  error_handling
-    - [x]  ljs_writing_practices
+    - [x]  js_writing_practices
+    - [x]  fault_finding
