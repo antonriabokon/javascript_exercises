@@ -1,0 +1,10 @@
+.statusDropdown {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.waiting { color: orange; font-weight: bold; }
+.ready { color: blue; font-weight: bold; }
+.delivered { color: green; font-weight: bold; }
