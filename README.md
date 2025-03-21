@@ -30,3 +30,8 @@
     - [x]  error_handling
     - [x]  js_writing_practices
     - [x]  fault_finding
+- **week_09:**
+    - [x]  async
+    - [x]  chaining
+    - [x]  spread_rest
+    - [x]  destructuring
