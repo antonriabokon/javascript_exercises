@@ -12,38 +12,34 @@ form.addEventListener("change", updateOrder);
 document.getElementById("seeOrder").addEventListener("click", displayOrderSummary);
 
 
-
+// Function to update order
 function updateOrder() {
     const pancakeType = document.querySelector("#type");
     const selectedPancake = pancakeType.options[pancakeType.selectedIndex];
     let totalPriceValue = parseFloat(selectedPancake.dataset.price);
 
-// Adding toppings in array
-let selectedToppings = [];
-document.querySelectorAll(".topping:checked").forEach(topping => {
-    selectedToppings.push(topping.parentElement.textContent.trim());
-});
-totalPriceValue += selectedToppings.length * 1;
+    selectedToppings.length = 0;
+    selectedExtras.length = 0;
 
-// Adding extras in an array
-let selectedExtras = [];
-document.querySelectorAll(".extra:checked").forEach(extra => {
-    selectedExtras.push({
-        name: extra.parentElement.textContent.trim(),
-        price: parseFloat(extra.dataset.price)
+    document.querySelectorAll(".topping:checked").forEach(topping => {
+        selectedToppings.push(topping.parentElement.textContent.trim());
     });
-});
-totalPriceValue += selectedExtras.reduce((sum, extra) => sum + extra.price, 0);
+    totalPriceValue += selectedToppings.length * 1;
 
-    // Updating a selected delivery option
+    document.querySelectorAll(".extra:checked").forEach(extra => {
+        selectedExtras.push({
+            name: extra.parentElement.textContent.trim(),
+            price: parseFloat(extra.dataset.price)
+        });
+    });
+    totalPriceValue += selectedExtras.reduce((sum, extra) => sum + extra.price, 0);
+
     const selectedDelivery = document.querySelector(".delivery:checked");
     totalPriceValue += parseFloat(selectedDelivery.dataset.price);
 
-    // Updating displayed price
     totalPrice.textContent = `${totalPriceValue}€`;
     totalPriceDisplay.textContent = `${totalPriceValue}€`;
 
-    // Animation on price update
     const priceBanner = document.querySelector(".price-banner");
     priceBanner.classList.add("fade-in");
     setTimeout(() => priceBanner.classList.remove("fade-in"), 500);
@@ -66,12 +62,12 @@ function displayOrderSummary() {
 
 updateOrder();
 
-// Adding transition button to the second page
+// Add transition button to the second page
 document.getElementById("orders").addEventListener("click", function () {
     window.location.href = "orders.html";
 });
 
-// Order confirmation function
+// Order confirmation function and create unique id
 document.getElementById("confirmOrder").addEventListener("click", function () {
     let order = {
         id: Date.now(),

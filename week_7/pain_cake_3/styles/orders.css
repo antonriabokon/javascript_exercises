@@ -1,3 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.order-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#searchBox {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 250px;
+}
+
+#removeDelivered {
+    padding: 8px 12px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+#removeDelivered:hover {
+    background-color: #cc0000;
+}
+
 .statusDropdown {
     padding: 5px;
     border-radius: 5px;
@@ -8,3 +43,18 @@
 .waiting { color: orange; font-weight: bold; }
 .ready { color: blue; font-weight: bold; }
 .delivered { color: green; font-weight: bold; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}

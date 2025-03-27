@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="styles/orders.css">
 </head>
 <body>
-
     <h2>All Orders</h2>
-
+    <div class="order-controls">
+        <input type="text" id="searchBox" placeholder="Search by Order ID or Customer">
+        <button id="removeDelivered">Remove Delivered Orders</button>
+    </div>
     <table>
         <thead>
             <tr>
@@ -22,7 +24,7 @@
                 <th>Status</th>
             </tr>
         </thead>
-        <pre id="ordersTable"></pre>
+        <tbody id="ordersTable"></tbody>
     </table>
 
     <script src="js/orders.js"></script>
